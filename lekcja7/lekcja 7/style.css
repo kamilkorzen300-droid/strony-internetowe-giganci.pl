@@ -1,0 +1,93 @@
+body {
+	background-color: #cfe8ff;
+}
+
+#ambulance {
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 200px 5px 10px 20px;
+	text-align: center;
+	color: white;
+	font-family: monospace;
+	font-size: 64px;
+	background: linear-gradient(0deg, white 0% 33.33%, red 33.33% 66.66%, white 66.66% 100%);
+	padding-top: 200px;
+	/* TODO: dodaj rozmiar, ramkę, zaokrąglenia, stylowanie napisu i gradient w tle */
+
+}
+
+.wheel {
+	width: 90px;
+	height: 90px;
+	background: 100px;
+	border: 10px solid black;
+	border-radius: 100px;
+	text-align: center;
+	animation: spin 1s linear infinite ;
+	/* TODO: zrób z kwadratu koło z grubą ramką i uruchom animację spin */
+}
+
+#wheel-front {
+	position: relative;
+	bottom: 50px;
+	left: 70px;
+	/* TODO: ustaw pozycję przedniego koła */
+}
+
+#wheel-back {
+	position: relative;
+	bottom: 163px;
+	left: 370px;
+	/* TODO: ustaw pozycję tylnego koła */
+}
+
+@keyframes spin {
+from { transform: rotate(0deg)}
+to { transform: rotate(360deg)}
+
+	/* TODO: opisz pełny obrót od 0 do 360 stopni */
+}
+
+#siren {
+	position: relative;
+	left: 200px;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	border-radius: 50px 50px 5px 5px;
+
+	/* TODO: nadaj syrenie rozmiar, czarne tło i zaokrąglony górny brzeg */
+}
+
+#siren:hover {
+	animation: siren 1s infinite;
+	/* TODO: uruchom animację siren po najechaniu myszką */
+}
+
+@keyframes siren {
+	0% {background-color: black;}
+	25% {background-color: blue;}
+	75% {background-color: red;}
+	/* TODO: opisz zmianę koloru tła od czarnego, przez niebieski, do czerwonego */
+}
+
+#emergency {
+	position: absolute;
+	right: 30%;
+	top: 200px;
+	padding: 20px;
+	background: red;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid blue;
+	border-radius: 10px;
+	transition: transform 1s;
+	/* TODO: ustaw czerwoną tabliczkę z niebieską ramką i włącz płynne przejście */
+}
+
+#emergency:hover {
+	transform: scale(5.5);
+	/* TODO: powiększ tabliczkę po najechaniu myszką */
+}
